@@ -1,3 +1,4 @@
+## ATS uyumlu LaTeX Özgeçmiş Örneği
 ### Açıklama
 Hem ATS'ler tarafından hem de insanlar tarafından kolay okunabilir, sayfanın her alanını kullanan bir özgeçmiş şablonu.
 
