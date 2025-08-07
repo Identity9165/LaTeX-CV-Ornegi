@@ -1,4 +1,6 @@
 ## ATS uyumlu LaTeX Özgeçmiş Örneği
+![Açıklama](https://img.shields.io/badge/dikkat-baz%C4%B1_k%C4%B1s%C4%B1mlar_AI_kodu_i%C3%A7erir-red?style=flat&logo=googlegemini)
+
 ### Açıklama
 Hem ATS'ler tarafından hem de insanlar tarafından kolay okunabilir, sayfanın her alanını kullanan bir özgeçmiş şablonu.
 
