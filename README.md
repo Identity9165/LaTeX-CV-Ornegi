@@ -15,7 +15,7 @@ Kullanmak için LaTeX bilmenize gerek yok, sadece [overleaf.com](https://www.ove
 
 ## Örnek Görsel ve PDF dosyası
 
-![Örnek Şablon Çıktısı](png)](pdf)
+![Örnek Şablon Çıktısı](assets\Aysegul_Ornek_Ozgecmis.png)](assets\Aysegul_Ornek_Ozgecmis.pdf)
 
 **Author**: Muzaffer Seha Çuhadar  
 **Based on the work of**: Michael Lustfield  

@@ -19,7 +19,6 @@
 # Intermediate output
 *.dvi
 *.ps
-*.pdf
 
 # Editors
 *.bak
@@ -37,3 +36,4 @@
 # Windows
 Thumbs.db
 "@ > .gitignore
+.gitconfig
