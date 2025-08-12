@@ -1,0 +1,229 @@
+%%%%
+% Ayşegül Örnek Özgeçmişi
+%%%%
+% Author: Muzaffer Seha Çuhadar
+% Based on the work of Michael Lustfield
+% 
+% License: CC-BY-4
+% - https://creativecommons.org/licenses/by/4.0/legalcode.txt
+%%%%
+% Hem ATS'ler tarafından hem de insanlar tarafından kolay okunabilir, sayfanın her alanını kullanan bir özgeçmiş şablonu
+% Kullanmak için LaTeX bilmenize gerek yok, overleaf.com 'da hesap açıp bu dosyanın içeriğini tümünü kopyalayın.
+% Değişiklikler: 
+% - Türkçe karakterleri destekleyen Times New Roman eşleniği TeX Gyre Termes kullanıldı
+% - Sayfa A4 ve yazılar 11 punto olacak şekilde değiştirildi
+% - ATS yazılımlarında sorun oluşturmaması açısından fontawesome ikonları ve en-dash'ler çıkarıldı 
+% - Son güncelleme kısmı eklendi, istemiyorsanız satırı tamamen silebilirsiniz
+% - Yaptığım testlerde hiç bir sorun olmadan ATS tarafından okunuyor
+%%%%
+
+\documentclass[a4paper,11pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{bookmark}
+\usepackage{lastpage}
+
+\usepackage{tgtermes}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\definecolor{accentTitle}{HTML}{004f90}
+\definecolor{accentText}{HTML}{004f90}
+\definecolor{accentLine}{HTML}{004f90}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyheadoffset{0pt}
+\fancyhead[R]{\footnotesize{\color{gray} Son Güncelleme: Ağustos 2025}}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\urlstyle{same}
+
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\footskip}{3.7pt}
+\raggedbottom
+\raggedright
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\newcommand{\documentTitle}[2]{
+  \begin{center}
+    {\Huge\color{accentTitle} #1}
+    \vspace{10pt}
+    {\color{accentLine} \hrule}
+    \vspace{2pt}
+    \footnotesize{#2}
+    \vspace{2pt}
+    {\color{accentLine} \hrule}
+  \end{center}
+}
+
+\newcommand{\documentFooter}[1]{
+  \setlength{\footskip}{10.25pt}
+  \fancyfoot[C]{\footnotesize #1}
+}
+
+\newcommand{\numberedPages}{
+  \documentFooter{\thepage/\pageref{LastPage}}
+}
+
+\titleformat{\section}{
+  \vspace{-5pt}
+  \color{accentText}
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{accentLine}\titlerule]
+
+\newcommand{\tinysection}[1]{
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  {\large{\bfseries\color{accentText}#1} {\color{accentLine} |}}
+}
+
+\newcommand{\heading}[2]{
+  \hspace{10pt}#1\hfill#2\\
+}
+
+\newcommand{\headingBf}[2]{
+  \heading{\textbf{#1}}{\textbf{#2}}
+}
+
+\newcommand{\headingIt}[2]{
+  \heading{\textit{#1}}{\textit{#2}}
+}
+
+\newenvironment{resume_list}{
+  \vspace{-7pt}
+  \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=30pt] 
+}{
+  \end{itemize}
+}
+
+\newcommand{\itemTitle}[1]{
+  \item[] \underline{#1}\vspace{4pt}
+}
+
+\renewcommand\labelitemi{--}
+
+\begin{document}
+
+  %---------%
+  % Başlık  %
+  %---------%  
+  \documentTitle{Ayşegül Örnek}{
+    \href{tel:+905559998877}{
+      Tel: +90-555-999-88-77} ~ | ~
+      Konum: Çankaya/Ankara ~ | ~
+    \href{mailto:ays.ornek@example.com}{
+    E-posta: ays.ornek@example.com} ~ | ~
+    \href{https://linkedin.com/in/orneklink}{
+     LinkedIn: linkedin.com/in/orneklink}
+  }
+
+  \tinysection{Özet}
+  10 yılı aşkın deneyime sahip, Linux ve Windows ekosistemlerinde uzman Bilgi İşlem ve Bulut Sistemleri Yöneticisi. Kurumsal altyapı tasarımı, otomasyon ve yüksek erişilebilirlik konularında tecrübeli. Yeni teknolojileri hızla benimseyen, çözüm odaklı yaklaşımıyla karmaşık sorunlara etkili çözümler üretmektedir. Dinamik bir takımda görev almak istemektedir.
+
+  %--------------%
+  % Yetkinlikler %
+  %--------------%
+
+  \section{Yetkinlikler}
+
+  \begin{multicols}{2}
+    \begin{itemize}[itemsep=-2px, parsep=1pt, leftmargin=75pt]
+      \item[\textbf{İşletim Sistemleri}] Debian, Ubuntu, Windows Server, macOS
+      \item[\textbf{Sanallaştırma}] KVM, VMware vSphere, Docker, Podman
+      \item[\textbf{Bulut}] AWS, GCP, Azure
+      \item[\textbf{Ağ}] TCP/IP, BGP, DNS, VPN, Zero Trust
+      \item[\textbf{Otomasyon}] Ansible, Terraform, Bash, Python
+      \item[\textbf{Gözlem}] Prometheus, Grafana, ELK, OpenTelemetry
+    \end{itemize}
+  \end{multicols}
+
+  %--------------%
+  %   Deneyim    %
+  %--------------% 
+
+  \section{Deneyim}
+
+  \headingBf{Kıdemli Bulut Sistemleri Mühendisi, Anonim Teknoloji A.Ş.}{Şub 2022 - Devam}
+  \begin{resume_list}
+    \item Kurumsal müşteriler için çoklu bulut altyapısı tasarımı ve yönetimi gerçekleştirildi.
+    \item Kubernetes tabanlı mikroservis platformu kurularak CI/CD süreçleri iyileştirildi.
+    \item Maliyet optimizasyonu ile aylık bulut harcamaları \%25 oranında azaltıldı.
+    \item Otomasyon playbook’ları geliştirilerek sunucu sağlama süresi 30 dk’dan 5 dk’ya indirildi.
+  \end{resume_list}
+
+  \headingBf{DevOps Mühendisi, Anonim Yazılım}{Ağu 2021 - Oca 2022}
+  \begin{resume_list}
+    \item SaaS ürünlerinin Docker-Compose ve Kubernetes ortamına taşınması sağlandı.
+    \item GitLab CI/CD hatları kurularak geliştirme-test-süreçleri hızlandırıldı.
+  \end{resume_list}
+
+  \headingBf{Sistem Yöneticisi, Anonim Lojistik}{Tem 2019 - Tem 2021}
+  \begin{resume_list}
+  \item Şirket genelinde tek oturum açma (SSO) altyapısı kuruldu.
+  \item Siber güvenlik farkındalık eğitimleri verilerek phishing vakaları \%40 azaltıldı.
+  \item Hibrit bulut yedekleme çözümü ile 7/24 veri erişilebilirliği sağlandı.
+  \item ERP sisteminin yüksek erişilebilirlik mimarisi tasarlandı ve devreye alındı.
+  \item Şube ofisler arasında SD-WAN altyapısı kurularak ağ performansı iyileştirildi.
+  \end{resume_list}
+
+  \headingBf{IT Altyapı Uzmanı, Anonim Bilişim}{May 2013 - Haz 2018}
+  \begin{resume_list}
+  \item 200+ fiziksel ve sanal sunucunun yönetimi yapıldı.
+  \item Asterisk tabanlı VoIP çözümü ile dahili hat maliyetleri \%60 düşürüldü.
+  \item Veri merkezi soğutma sistemleri yenilenerek enerji tasarrufu sağlandı.
+  \item VMware vSphere altyapısı kuruldu ve sanallaştırma oranı \%80’e çıkarıldı.
+  \item Otomatik yama yönetimi ile güvenlik açığı süresi haftadan güne indirildi.
+  \end{resume_list}
+
+  \headingBf{Destek Uzmanı, Anonim Mimarlık}{Eyl 2012 - Ara 2012}
+  \begin{resume_list}
+    \item Ofis ve şantiye lokasyonları arasında güvenli VPN tünelleri kuruldu.
+    \item Autodesk yazılım lisanslarının merkezi yönetimi sağlandı.
+    \item Akıllı ofis IoT sensörleri için pilot proje başlatıldı.
+  \end{resume_list}
+
+  \headingBf{IT Koordinatörü, Anonim Plastik}{Oca 2011 - Oca 2012}
+  \begin{resume_list}
+    \item Firmanın ilk web sitesi ve e-ticaret altyapısı geliştirildi.
+    \item CRM entegrasyonu ile müşteri memnuniyeti artırıldı.
+  \end{resume_list}
+
+  \headingBf{NOC Uzmanı, Anonim Telekom}{Ağu 2009 - Ağu 2010}
+  \begin{resume_list}
+    \item 7/24 veri merkezi operasyonları izlendi ve olaylara müdahale edildi.
+    \item Ağ ve fiziksel altyapı bakım/onarım süreçleri yürütüldü.
+  \end{resume_list}
+
+  %-----------%
+  %  Eğitim   %
+  %-----------%
+
+  \section{Eğitim}
+
+  \headingBf{Orta Doğu Teknik Üniversitesi}{Ankara, Türkiye}
+  \headingIt{Bilgisayar Mühendisliği Lisans}{2011}
+  \vspace{5pt}
+  \headingBf{Sertifikalar}{}
+  \begin{resume_list}
+    \item AWS Certified Solutions Architect – Associate – 2023
+    \item Cisco CCNP Enterprise – 2022
+  \end{resume_list}
+
+\end{document}

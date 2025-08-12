@@ -1,0 +1,39 @@
+@"
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+
+# Intermediate output
+*.dvi
+*.ps
+
+# Editors
+*.bak
+*~
+*.swp
+*.tmp
+
+# VS Code
+.vscode/
+.code-workspace
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+"@ > .gitignore
+.gitconfig
